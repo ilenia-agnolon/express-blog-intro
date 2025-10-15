@@ -51,6 +51,11 @@ app.get("/", (req, res) => {
   res.send("Server del mio blog");
 });
 
+//rotta /bacheca
+app.get("/bacheca", (req, res) => {
+  res.json(posts);
+});
+
 // metto in ascolto il server sulla porta definita
 app.listen(port, () => {
   console.log(`✅ Server avviato sulla porta ${port}`);
